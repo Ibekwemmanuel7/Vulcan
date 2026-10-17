@@ -1,5 +1,11 @@
 # Vulcan
 
+<!-- LILLIE_US_PORTFOLIO_START -->
+**Part of [Lillie US](https://github.com/Ibekwemmanuel7/Lillie_US)** · [Portfolio map](https://github.com/Ibekwemmanuel7/Lillie_US/blob/main/docs/PORTFOLIO.md) · [Scope and boundaries](docs/portfolio/SCOPE.md)
+
+**Portfolio domain:** Mineral prospectivity, mineral rights and permits. **Status:** Existing experimental prospectivity framework; rights and permit workflows are planned.
+<!-- LILLIE_US_PORTFOLIO_END -->
+
 Experimental mineral-prospectivity research framework, developed from GeoSentry / ML_mineral. Combines satellite, terrain and geophysical inputs with spatial evaluation and interpretable models. It is not a validated mineral-discovery product.
 
 ## Relationship to Lillie US
@@ -41,3 +47,7 @@ See [the original detailed framework documentation](docs/GEOSENTRY_ORIGINAL_READ
 The mineral-component history was extracted from Lillie US without changing its Python code, tests or scientific configurations. `provenance/ML_mineral_import_2026-10-17.json` preserves the original local import manifest. `SOURCE_MANIFEST.json` identifies the current selected source snapshot. Git commits are the integration pin.
 
 Datasets, survey grids, installers, trained models, credentials, environments and generated outputs are excluded. The original local ML_mineral folder remains separate and unchanged.
+
+## Mineral rights and permits roadmap
+
+The portfolio scope now includes records-linked mineral rights and permit intelligence as a planned extension. Existing prospectivity code does not establish ownership or legal compliance. See [the delivery roadmap](docs/portfolio/RIGHTS_PERMITS_ROADMAP.md).

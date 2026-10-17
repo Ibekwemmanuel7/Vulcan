@@ -16,7 +16,7 @@
     "source docs"
   ],
   "tree_hash_algorithm": "SHA-256 of sorted UTF-8 path + NUL + file SHA-256 + newline records",
-  "tree_sha256": "d1371ba16e431739bc5eedda09db9ec916a94539f839da95e1a494bd57b94731",
+  "tree_sha256": "d94aa474705a267612dd93fc521e981b69dd640f66a2e2537cce645ab5af10e3",
   "files": {
     ".gitignore": {
       "sha256": "9ad1f480b5506923e980d5734f615dcddce5cdf6179efade033f3a94bd56a31a",
@@ -27,8 +27,8 @@
       "bytes": 94
     },
     "README.md": {
-      "sha256": "64993401bc412582be53a35d0e77819fc1d364bf4e7ab24d4497d1fc40530e1b",
-      "bytes": 2604
+      "sha256": "07de1e015a4a5ee3af500e25c91eef51989435616a2afd87ef3e2728dc00a193",
+      "bytes": 3315
     },
     "configs/demo.yaml": {
       "sha256": "f1f66edcd4874a82b3e4a44ac859af83d650f29e5da8e8ac5d024c2a6d516feb",
