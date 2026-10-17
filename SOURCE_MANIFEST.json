@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "source_name": "ML_mineral",
+  "source_name": "Vulcan",
   "imported_on": "2026-10-17",
   "source_commit": null,
-  "source_repository": null,
+  "source_repository": "https://github.com/Ibekwemmanuel7/Vulcan.git",
   "selection": "Python source, scripts and tests; YAML configurations; entry points, requirements, setup script, README, gitignore and Streamlit display configuration.",
   "excluded": [
     "Git metadata",
@@ -16,19 +16,19 @@
     "source docs"
   ],
   "tree_hash_algorithm": "SHA-256 of sorted UTF-8 path + NUL + file SHA-256 + newline records",
-  "tree_sha256": "3b198093dff46c13420c99dd49891c4a76fbb7bbe822dea6a889c47ec433f8f3",
+  "tree_sha256": "d1371ba16e431739bc5eedda09db9ec916a94539f839da95e1a494bd57b94731",
   "files": {
     ".gitignore": {
-      "sha256": "d1ca1571bfeb023a3dcb8990ea14458580d7b6b474320461a6b67847f80b4e2c",
-      "bytes": 791
+      "sha256": "9ad1f480b5506923e980d5734f615dcddce5cdf6179efade033f3a94bd56a31a",
+      "bytes": 870
     },
     ".streamlit/config.toml": {
       "sha256": "b5a0c5915f01ba9afda42971e88868b50166f13715fe62e5796dd25fd3034a40",
       "bytes": 94
     },
     "README.md": {
-      "sha256": "8a56e19327227ff5fad38e11b1db7ecf0d85ee2876061972cba375284501f9a1",
-      "bytes": 10071
+      "sha256": "64993401bc412582be53a35d0e77819fc1d364bf4e7ab24d4497d1fc40530e1b",
+      "bytes": 2604
     },
     "configs/demo.yaml": {
       "sha256": "f1f66edcd4874a82b3e4a44ac859af83d650f29e5da8e8ac5d024c2a6d516feb",
@@ -238,5 +238,6 @@
       "sha256": "345f58b14c84fc2f55d7efcd04806965939fa8235fed7972f7b4a82d572e6f6a",
       "bytes": 5872
     }
-  }
+  },
+  "note": "Manifest maintained within the repository; the consuming repository records the exact Git commit. Historical local import manifest is under provenance."
 }

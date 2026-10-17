@@ -64,3 +64,8 @@ desktop.ini
 
 # Files staged for manual deletion
 _to_delete/
+
+# Additional local-only mineral workspace content
+.venv*/
+Sheet_*/
+*.exe
