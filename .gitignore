@@ -1,0 +1,66 @@
+# ---- Python / environments ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- ALL data and outputs stay local (licensed NGSA / survey data, client labels) ----
+data/**
+!data/**/
+!data/**/.gitkeep
+outputs/**
+!outputs/**/
+!outputs/**/.gitkeep
+
+# ---- Geospatial and model binaries anywhere in the tree ----
+*.tif
+*.tiff
+*.vrt
+*.img
+*.jp2
+*.nc
+*.h5
+*.hdf
+*.grd
+*.ers
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.gpkg
+*.geojson
+*.kml
+*.kmz
+*.zip
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.joblib
+*.pkl
+*.npy
+*.npz
+
+# ---- Secrets and credentials ----
+.env
+.env.*
+*.key
+*.pem
+credentials*.json
+service-account*.json
+.streamlit/secrets.toml
+configs/*secret*
+
+# ---- OS / editor ----
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Files staged for manual deletion
+_to_delete/

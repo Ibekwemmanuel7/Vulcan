@@ -1,0 +1,162 @@
+project:
+  name: Udegi real-data reconnaissance
+  crs: EPSG:32632
+  resolution_m: 10.0
+  extent: intersection
+  extent_lonlat:
+  - 7.501
+  - 8.001
+  - 7.999
+  - 8.499
+  seed: 42
+  demo: false
+paths:
+  raw_dir: data/udegi/raw
+  processed_dir: data/udegi/processed
+  labels_dir: data/udegi/labels
+  stack: data/udegi/processed/stack.tif
+  valid_mask: data/udegi/processed/valid_mask.tif
+  scaling_stats: data/udegi/processed/scaling_stats.json
+  target_mask: data/udegi/labels/target_mask.tif
+  positives_csv: data/udegi/labels/known_occurrences.csv
+  models_dir: outputs/udegi/models
+  ssl_weights: outputs/udegi/models/ssl_encoder.pt
+  stage1_weights: outputs/udegi/models/attention_unet_best.pt
+  stage1_features: outputs/udegi/rasters/stage1_features.tif
+  prospectivity: outputs/udegi/rasters/prospectivity.tif
+  reports_dir: outputs/udegi/reports
+layers:
+  s2_b02:
+    path: data/udegi/raw/S2_B02.tif
+    kind: optical
+  s2_b03:
+    path: data/udegi/raw/S2_B03.tif
+    kind: optical
+  s2_b04:
+    path: data/udegi/raw/S2_B04.tif
+    kind: optical
+  s2_b08:
+    path: data/udegi/raw/S2_B08.tif
+    kind: optical
+  s2_b11:
+    path: data/udegi/raw/S2_B11.tif
+    kind: optical
+  s2_b12:
+    path: data/udegi/raw/S2_B12.tif
+    kind: optical
+  s1_vv:
+    path: data/udegi/raw/S1_VV.tif
+    kind: sar
+    to_db: true
+  s1_vh:
+    path: data/udegi/raw/S1_VH.tif
+    kind: sar
+    to_db: true
+  mag:
+    path: data/udegi/raw/MAG_TMI.tif
+    kind: geophys
+    compute_1vd: true
+    smooth_sigma_px: 2.0
+  th:
+    path: data/udegi/raw/RAD_eTh.tif
+    kind: geophys
+    smooth_sigma_px: 2.0
+  dem:
+    path: data/udegi/raw/DEM.tif
+    kind: dem
+channels:
+- B2_blue
+- B3_green
+- B4_red
+- B8_nir
+- S1_VV_dB
+- S1_VH_dB
+- OH_alteration
+- NDVI
+- MAG_1VD
+- DEM_slope
+acquisition:
+  s2_date_ranges:
+  - 2024-11-01/2025-02-28
+  - 2025-11-01/2026-02-28
+  s2_max_cloud_pct: 30
+  s1_date_ranges:
+  - 2024-11-01/2025-02-28
+  - 2025-11-01/2026-02-28
+  s1_orbit_state: null
+scaling:
+  clip_percentiles:
+  - 2.0
+  - 98.0
+  zscore_clip_percentiles:
+  - 0.5
+  - 99.5
+  zscore_limit: 5.0
+stage1:
+  patch_size: 256
+  stride: 128
+  min_valid_fraction: 0.6
+  positive_oversample: 4
+  base_channels: 32
+  depth: 4
+  latent_channels: 8
+  dropout: 0.1
+  batch_size: 8
+  epochs: 60
+  lr: 0.0003
+  weight_decay: 0.0001
+  num_workers: 0
+  val_block_px: 1024
+  val_fraction: 0.2
+  allow_random_split: false
+  freeze_encoder_epochs: 3
+  early_stop_patience: 12
+  loss:
+    focal_alpha: 0.85
+    focal_gamma: 2.0
+    dice_weight: 1.0
+    focal_weight: 1.0
+  ssl:
+    epochs: 40
+    lr: 0.0005
+    mask_patch: 16
+    mask_ratio: 0.6
+    channel_drop_prob: 0.3
+  inference:
+    overlap: 64
+    tta: true
+stage2:
+  commodity_filter: Li
+  positive_buffer_px: 2
+  exclusion_radius_m: 500
+  unlabeled_samples: 60000
+  bags: 50
+  unlabeled_per_bag_ratio: 1.0
+  xgb:
+    n_estimators: 400
+    max_depth: 5
+    learning_rate: 0.05
+    subsample: 0.8
+    colsample_bytree: 0.8
+    min_child_weight: 2
+    reg_lambda: 1.0
+    tree_method: hist
+  shap_samples: 3000
+  predict_block: 1024
+  target_top_area: 0.02
+evaluation:
+  outer_folds: 5
+  block_m: 5000
+  dead_zone_m: 1000
+  cluster_radius_m: 500
+  occurrence_buffer_m: 50
+  ssl_mode: transductive
+  methods:
+  - two_stage
+  - stage1_only
+  - pu_xgb_physical
+  - pu_logreg_physical
+  seeds:
+  - 42
+  bootstrap: 2000
+  logreg_C: 1.0

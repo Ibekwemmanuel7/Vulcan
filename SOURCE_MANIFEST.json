@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "source_name": "ML_mineral",
+  "imported_on": "2026-10-17",
+  "source_commit": null,
+  "source_repository": null,
+  "selection": "Python source, scripts and tests; YAML configurations; entry points, requirements, setup script, README, gitignore and Streamlit display configuration.",
+  "excluded": [
+    "Git metadata",
+    "virtual environments",
+    "datasets and survey files",
+    "outputs and trained models",
+    "installers",
+    "notebooks",
+    "local caches",
+    "source docs"
+  ],
+  "tree_hash_algorithm": "SHA-256 of sorted UTF-8 path + NUL + file SHA-256 + newline records",
+  "tree_sha256": "3b198093dff46c13420c99dd49891c4a76fbb7bbe822dea6a889c47ec433f8f3",
+  "files": {
+    ".gitignore": {
+      "sha256": "d1ca1571bfeb023a3dcb8990ea14458580d7b6b474320461a6b67847f80b4e2c",
+      "bytes": 791
+    },
+    ".streamlit/config.toml": {
+      "sha256": "b5a0c5915f01ba9afda42971e88868b50166f13715fe62e5796dd25fd3034a40",
+      "bytes": 94
+    },
+    "README.md": {
+      "sha256": "8a56e19327227ff5fad38e11b1db7ecf0d85ee2876061972cba375284501f9a1",
+      "bytes": 10071
+    },
+    "configs/demo.yaml": {
+      "sha256": "f1f66edcd4874a82b3e4a44ac859af83d650f29e5da8e8ac5d024c2a6d516feb",
+      "bytes": 3290
+    },
+    "configs/geosentry.yaml": {
+      "sha256": "33ccbe2a6f43c449a7f16f9df6a3ee5946bf05e38cd115aff71467989dcf15f4",
+      "bytes": 6463
+    },
+    "configs/pilot_nasarawa_keffi_li.yaml": {
+      "sha256": "e18ab90e032b172c84045696e5447d918df25728766369f05cb2a11569394a1f",
+      "bytes": 8126
+    },
+    "configs/pilot_udegi.yaml": {
+      "sha256": "c33fd9d7485065799d9d9438919ebab150694c65827748d054e6b9fc2cc9da39",
+      "bytes": 3501
+    },
+    "main.py": {
+      "sha256": "57bc0041bfa06a6b18b8aa9e98f14b276807db735dd774921d893377bf0ff44e",
+      "bytes": 26380
+    },
+    "requirements.txt": {
+      "sha256": "62fb0fa695a9a14e7c82769b1289041599cf60d22a041690c033b6bad83d3fff",
+      "bytes": 505
+    },
+    "run_pipeline.py": {
+      "sha256": "ff9057f226be6727310a1b4836ef4d2db3264df2f575b3f82d7f43da7644ffe3",
+      "bytes": 5201
+    },
+    "scripts/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "scripts/align_udegi_geophysics.py": {
+      "sha256": "825a1eaab0cdcbdff08ffd4705c25bff586829e88cb9386a79c5201e189189f5",
+      "bytes": 4737
+    },
+    "scripts/audit_ngsa_metadata.py": {
+      "sha256": "4d92c3e2a38b809a44655a074fe71cff71940a3f4ca9e75e8310ed72d52f75cd",
+      "bytes": 2722
+    },
+    "scripts/audit_udegi_exports.py": {
+      "sha256": "e58c81bbb2227d8a49a84f24a61c55e3a61e95d0fffac9f5b40112a0b2998289",
+      "bytes": 3177
+    },
+    "scripts/build_combined_test.py": {
+      "sha256": "03c4b33664beaa080e3662b2770eab0181cc77a00f2ec210ca560828564f67eb",
+      "bytes": 3883
+    },
+    "scripts/build_geology_context.py": {
+      "sha256": "12c0bbaa263064829ca4dc5464215d4c1d660d156c1f934054d2486d28274605",
+      "bytes": 2526
+    },
+    "scripts/build_occurrence_csv.py": {
+      "sha256": "e824461977f1da22edd953c60d33c2e8d9efc6a174d7f9aac0fca08dd840bf95",
+      "bytes": 2543
+    },
+    "scripts/build_reconnaissance.py": {
+      "sha256": "74193ed5f54bd76fd934eb964f744b31f6f004da949f24f5c8e2deace7af32ff",
+      "bytes": 5201
+    },
+    "scripts/build_review_package.py": {
+      "sha256": "b396d5a202c727321eb7565df3df31b9c6d311afa03262a4295e3d9856c084b3",
+      "bytes": 4123
+    },
+    "scripts/build_spatial_review.py": {
+      "sha256": "d664d246031fec15cd13e4c8c9578a4262ddc196ff810823429a6bf26310db44",
+      "bytes": 4277
+    },
+    "scripts/check_cover_sensitivity.py": {
+      "sha256": "a7ef876e044a4a9f3fc7a6e1a882460450dd34160c376d64f7ab35e07daf5194",
+      "bytes": 2051
+    },
+    "scripts/check_native_cells.py": {
+      "sha256": "fb6583462d199d8ca02a3708009748941060e1839a9d3cb6e3b9985e6c7a2b1e",
+      "bytes": 3165
+    },
+    "scripts/check_surface_cover.py": {
+      "sha256": "13aaa35d88f2a1f7bd08bf44bb98abc15901baf8a03c0363a9d01da9f386f812",
+      "bytes": 3117
+    },
+    "scripts/compare_review_cells.py": {
+      "sha256": "91982017fca8da92ac397cce4592c75258dfc19d336215a0fb65c2e19c09cac0",
+      "bytes": 2524
+    },
+    "scripts/convert_udegi_native.py": {
+      "sha256": "787686a6fe8743102745d089cb98a51d0de17b5aab9e205dd8ee6e6029b8652b",
+      "bytes": 1774
+    },
+    "scripts/fetch_open_data.py": {
+      "sha256": "dcfa996b9282e2a57cfd804dfdfa8ca1cc8609b09fa3fee5589868ab8e3b4119",
+      "bytes": 18804
+    },
+    "scripts/import_ngsa_grid.py": {
+      "sha256": "36109bfcc42127dc8f5670070a94f991665a4a5f60a31448216a5ac67002a7a1",
+      "bytes": 12058
+    },
+    "scripts/make_synthetic_demo.py": {
+      "sha256": "e88a8c020fa19ec5b91bce17e2a1d87f936f764011e001844f118eba742b258c",
+      "bytes": 10270
+    },
+    "scripts/map_udegi_coverage.py": {
+      "sha256": "dffde7ca81b417ec857e8487e80a5886bbc40c1e36ae7238546c6af68552d081",
+      "bytes": 2615
+    },
+    "scripts/preview_away_vegetation.py": {
+      "sha256": "3e8a79de23590a6113b96cca62e592619f4319050a37d9787353f71cc9bd3712",
+      "bytes": 2312
+    },
+    "scripts/render_geology_reference.py": {
+      "sha256": "b910992c974af6408de6c444297999859e47492d86407b45eeafa77cd5d64411",
+      "bytes": 1096
+    },
+    "scripts/review_cell_terrain.py": {
+      "sha256": "ac2a12b0df15c037a4351b26dd99057d9d6143bbec205e7479b143075d7562b7",
+      "bytes": 4796
+    },
+    "scripts/run_geotessera.py": {
+      "sha256": "2cf54cf480661e430cd8ab2368e4af4fe085549067ec0a6c5afba946d87c7090",
+      "bytes": 471
+    },
+    "setup_workspace.ps1": {
+      "sha256": "eb3f4d85d5e4ab1808f8611a03dc82b8cd034945d9d7f2998800e0f6fc7d8c17",
+      "bytes": 8275
+    },
+    "src/__init__.py": {
+      "sha256": "94a48c5f2763e8d5683ef1506172214f4d298d670c4afd42004678ba6bb626b9",
+      "bytes": 89
+    },
+    "src/config.py": {
+      "sha256": "d36ef0a425304ac7d4752159c818f6e209c376a4ea92271d578717579be6f293",
+      "bytes": 1870
+    },
+    "src/evaluation/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "src/evaluation/folds.py": {
+      "sha256": "155fc29de0d5c29456d9dbf0c78b4f8c1ac23838c6f0754d9dde9097a1aade50",
+      "bytes": 16726
+    },
+    "src/evaluation/metrics.py": {
+      "sha256": "c4ed5be59f9c4a2be427aaad5ae4116554fbaac88804632020e90e0d5d7bf41b",
+      "bytes": 8779
+    },
+    "src/evaluation/nested_cv.py": {
+      "sha256": "92ca727fc70d5bae98ec3e00e59cb8ea796b232468f610a9212dba3d4fb2dc49",
+      "bytes": 18895
+    },
+    "src/geo_runtime.py": {
+      "sha256": "09db4fe940032f4d71abf7a21d6efd1bd7b7a8b43a34a3d2837edfcfc4875c9e",
+      "bytes": 650
+    },
+    "src/models/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "src/models/attention_unet.py": {
+      "sha256": "33684805a009393cd5a00b42b2ada869ebc332da97184d741b8bc1068f80c979",
+      "bytes": 21827
+    },
+    "src/models/prospector_xgb.py": {
+      "sha256": "5822c706eebacaa135f20864981ef4e605707d6e8fa73dd15e90a8d8999399da",
+      "bytes": 23263
+    },
+    "src/models/ssl_pretrain.py": {
+      "sha256": "89e5dd8ced6e811a3e36067603ca67adcac5a389d55418dec03ee0a1df8c7342",
+      "bytes": 6291
+    },
+    "src/pipeline/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "src/pipeline/stage1.py": {
+      "sha256": "c7af8f30d4b5cf1f6947a1a9c35418e68347afc5c2535e7d9a0d714fbbabe5cc",
+      "bytes": 18158
+    },
+    "src/utils/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "src/utils/harmonizer.py": {
+      "sha256": "6f19e2a62f1e870685c39f3be84c722bcffbad8931b484e5a40d3e4d390f3711",
+      "bytes": 21508
+    },
+    "src/xai/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "src/xai/gradcam.py": {
+      "sha256": "64bb0cd99e66786a27249e4c08e1b0d3255c57b5f55d230fbb9763a862fb0eff",
+      "bytes": 8569
+    },
+    "tests/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "tests/test_core.py": {
+      "sha256": "c6398e12628476ea1be018593b8bce0e724656cc32dc8a43ce0248331b0ece78",
+      "bytes": 12070
+    },
+    "tests/test_geo_runtime.py": {
+      "sha256": "6c86e9524894690fd7d3245780d8366bbbca9922478d64f6768069226c13bae7",
+      "bytes": 823
+    },
+    "tests/test_pilot.py": {
+      "sha256": "345f58b14c84fc2f55d7efcd04806965939fa8235fed7972f7b4a82d572e6f6a",
+      "bytes": 5872
+    }
+  }
+}
